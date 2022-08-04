@@ -3,7 +3,7 @@
   "status": "registered",
   "specification": "https://github.com/peaqnetwork/peaq-did-specifications",
   "contactEmail": "info@peaq.io",
-  "contactName": "peaq GmbH",
-  "contactWebsite": "https://www.peaq.io/",
+  "contactName": "Peaq Technology GmbH",
+  "contactWebsite": "https://www.peaq.network",
   "verifiableDataRegistry": "peaq Blockchain"
 }
