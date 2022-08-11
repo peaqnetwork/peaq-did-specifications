@@ -64,3 +64,12 @@ Taking into account our base use case of charging stations, following are few ke
 - There should be a p2p service present allowing others to communicate with this entity using libp2p networking. All further communications will be handled by the channels established by means of this service.
 - All verifications must make use of the key specified by the authentication attribute of the DID document.
 
+## peaq DID Security
+
+This section provides the security consideration for the DID method implementation.
+
+1) Firstly the peaq blockchain is based on the Substrate blockchain framework, and as such, it heavily relies on its implementation for most of the cryptographic operations. 
+2) Secondly did:peaq is supported by ed25519 and sr25519 is immune to cache-timing attacks , hyperthreading attacks and other side-channel attacks. 
+3) Thirdly since DID document are always to be signed and the 'chain of custody' of the signing key can be traced throughout the identity lifespan, replay, message insertion, deletion, modification and man-in-the-middle attacks are prevented. 
+4) Implementation of best practices: The did:peaq implements security auditing, logging, and proactive monitoring according to industry best practices. The did:peaq utilizes best practices regarding a secure software supply chain for any libraries or other software components in use.
+
