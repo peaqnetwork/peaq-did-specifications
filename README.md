@@ -73,3 +73,11 @@ This section provides the security consideration for the DID method implementati
 3) Thirdly since DID document are always to be signed and the 'chain of custody' of the signing key can be traced throughout the identity lifespan, replay, message insertion, deletion, modification and man-in-the-middle attacks are prevented. 
 4) Implementation of best practices: The did:peaq implements security auditing, logging, and proactive monitoring according to industry best practices. The did:peaq utilizes best practices regarding a secure software supply chain for any libraries or other software components in use.
 
+## peaq DID privacy 
+
+This section provides the privacy consideration for the DID method implementation.
+
+The peaq supports verifiable credentials that are issued to a specific DID, hence the same DID needs to be revealed upon a credential presentation and the DID subject must prove ownership of the DID being used.
+
+Personal Identity Information :No personal identity information to be stored in a DID document if necessary the integrity and confidentiality of personal data must be ensured. If required, DID authority ensures that necessary security controls are in place to protect user personal data in addition this it be ensured that no personal data or personally identifying information is written on any system memory, or log at the system or application level. 
+
