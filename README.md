@@ -81,3 +81,25 @@ The peaq supports verifiable credentials that are issued to a specific DID, henc
 
 Personal Identity Information :No personal identity information to be stored in a DID document if necessary the integrity and confidentiality of personal data must be ensured. If required, DID authority ensures that necessary security controls are in place to protect user personal data in addition this it be ensured that no personal data or personally identifying information is written on any system memory, or log at the system or application level. 
 
+## peaq CRUD Operation Definitions
+
+Peaq DID Pallet that has Four Extrinsics for managing DID.
+
+## Create
+Add DID attribute that will compose the DID-document.
+Allow any attribute to be added. 
+
+## Update 
+Update DID attribute already existing on the DID-document.
+Return Not Found Error if it doesn't exists.
+Owner can only update its DID-document.
+
+## Read 
+Read DID attribute if it exist on the DID-document else return error.
+Everyone can read DID-document.
+
+## Remove 
+
+Delete DID attribute already existing on the DID-document.
+Dispatch error if it doesn't exists.
+Owner can only remove attributes they own.
