@@ -86,20 +86,13 @@ Personal Identity Information :No personal identity information to be stored in 
 Peaq DID Pallet that has Four Extrinsics for managing DID.
 
 ## Create
-Add DID attribute that will compose the DID-document.
-Allow any attribute to be added. 
+To create DID document, use createAttribute extrinsic with name as public key and value as the DID document.
 
 ## Update 
-Update DID attribute already existing on the DID-document.
-Return Not Found Error if it doesn't exists.
-Owner can only update its DID-document.
+For Update we use the same process as create just call updateAttribute extrinsic and add the name (address) and updated value(DID document.
 
 ## Read 
-Read DID attribute if it exist on the DID-document else return error.
-Everyone can read DID-document.
+We use readAttribute extrinsic function to read the DID document, you just need to input the name which is user address or public key in this case to get the DID document
 
 ## Remove 
-
-Delete DID attribute already existing on the DID-document.
-Dispatch error if it doesn't exists.
-Owner can only remove attributes they own.
+To remove call removeAttribute with name (address or public key) of the DID document.
