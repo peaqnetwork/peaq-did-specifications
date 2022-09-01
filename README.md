@@ -83,6 +83,51 @@ Personal Identity Information :No personal identity information to be stored in 
 
 ## peaq CRUD Operation Definitions
 
+In order to access the extrinsic , kindly click [here](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fwss.agung.peaq.network#/extrinsics)
+choose peaqDid extrinsic from "submit the following extrinsic" option and then you can perform the following operations
+
+The minimal peaq DID document looks like as below:
+```
+{
+  "id": "did:peaq:5HRNr4pXH7PYKEmeW1jzJVxepXyg8w2Q3YpgRNHpH8foNr5i",
+  "controller": "did:peaq:5HRNr4pXH7PYKEmeW1jzJVxepXyg8w2Q3YpgRNHpH8foNr5i",
+  "verificationMethod": [
+    {
+      "id": "#pk1",
+      "type": "Ed25519VerificationKey2020",
+      "controller": "did:peaq:5HRNr4pXH7PYKEmeW1jzJVxepXyg8w2Q3YpgRNHpH8foNr5i",
+      "publicKeyMultibase": "z5HRNr4pXH7PYKEmeW1jzJVxepXyg8w2Q3YpgRNHpH8foNr5i" 
+    }
+  ],
+  "signature" : 
+    {
+       type: "Ed25519VerificationKey2020",
+       issuer: "<did address of Peaq>",
+       hash: "<signature>"
+    },
+  "service": [
+    {
+      "id": "#payment",
+      "type": "payment",
+      "serviceEndpoint": "5HRNr4pXH7PYKEmeW1jzJVxepXyg8w2Q3YpgRNHpH8foNr5i"
+    },
+    {
+      "id": "#p2p",
+      "type": "p2p",
+      "serviceEndpoint" : "/ipv4/w.x.y.z/tcp/port/p2p-circuit/p2p/QmPublicKey"
+    },
+    {
+      "id": "#metadata",
+      "type": "metadata",
+      "serviceEndpoint" : "/ipv4/w.x.y.z/tcp/port/p2p-circuit/p2p/QmPublicKey"
+    }
+  ],
+  "authentication": [
+    "#pk1"
+  ]
+}
+```
+
 Peaq DID Pallet that has Four Extrinsics for managing DID.
 
 ## Create
